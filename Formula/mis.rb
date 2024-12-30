@@ -1,15 +1,15 @@
 class Mis < Formula
   desc "Kubernetes Management and Inspection System"
   homepage "https://github.com/ramborogers/mis"
-  version "0.1.1m" # Default to 0.1.0 if VERSION is not set
+  version "0.1.1m"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ramborogers/mis/releases/download/\#{version}/mis-darwin-amd64"
-      sha256 "68d43a06be63bf0a44b11481774d9325fc45597e10ff9247c9a706cfdbcdb3a2"
+      url "https://github.com/ramborogers/mis/releases/download/0.1.1m/mis-darwin-amd64"
+      sha256 "5330fe2f44542eb946d32736553e7f3441dd0f830705b3a22302c113fedbde09"
     else
-      url "https://github.com/ramborogers/mis/releases/download/\#{version}/mis-darwin-arm64"
-      sha256 "56edd8fbeceb591b319059b2ae36235d73bee7cb8faa23d8bc8749f027cdcde3"
+      url "https://github.com/ramborogers/mis/releases/download/0.1.1m/mis-darwin-arm64"
+      sha256 "9fcc275e3ed8900639f35f644b6a049127a2036e8910f87ca189689cf949736e"
     end
   end
 
@@ -22,6 +22,6 @@ class Mis < Formula
   end
 
   test do
-    system "#{bin}/mis", "--version"
+    system "\#{bin}/mis", "--version"
   end
 end
