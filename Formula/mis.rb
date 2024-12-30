@@ -19,7 +19,13 @@ class Mis < Formula
     else
       bin.install "mis-darwin-arm64" => "mis"
     end
+    # Remove quarantine attribute
+    system "xattr", "-d", "com.apple.quarantine", "#{bin}/mis"
+  rescue
+    # Ignore if xattr fails (in case attribute doesn't exist)
+    nil
   end
+
 
   test do
     system "\#{bin}/mis", "--version"
