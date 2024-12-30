@@ -6,10 +6,10 @@ class Mis < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ramborogers/mis/releases/download/0.1.1m/mis-darwin-amd64"
-      sha256 "5330fe2f44542eb946d32736553e7f3441dd0f830705b3a22302c113fedbde09"
+      sha256 "6128b3432875e0e9af07638630d5d9dd733f5a3c5be9462709e0ae9f8928809f"
     else
       url "https://github.com/ramborogers/mis/releases/download/0.1.1m/mis-darwin-arm64"
-      sha256 "9fcc275e3ed8900639f35f644b6a049127a2036e8910f87ca189689cf949736e"
+      sha256 "6395e3472524956061d9aa51888bb62fcefb7f36a9df6c2f4138c2b7ab6ad6d1"
     end
   end
 
