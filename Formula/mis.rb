@@ -1,15 +1,15 @@
 class Mis < Formula
   desc "Kubernetes Management and Inspection System"
   homepage "https://github.com/ramborogers/mis"
-  version "0.1.1m"
+  version "0.1.2m"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ramborogers/mis/releases/download/0.1.1m/mis-darwin-amd64"
-      sha256 "6128b3432875e0e9af07638630d5d9dd733f5a3c5be9462709e0ae9f8928809f"
+      url "https://github.com/ramborogers/mis/releases/download/0.1.2m/mis-darwin-amd64"
+      sha256 "a3daf07ca07e0ff6d8a4feea51b346a4c97ec3fabfaacc014e50188bfe35109a"
     else
-      url "https://github.com/ramborogers/mis/releases/download/0.1.1m/mis-darwin-arm64"
-      sha256 "6395e3472524956061d9aa51888bb62fcefb7f36a9df6c2f4138c2b7ab6ad6d1"
+      url "https://github.com/ramborogers/mis/releases/download/0.1.2m/mis-darwin-arm64"
+      sha256 "34006e7d7457c8f15b74d42338f93c9d3c9bf4b2a68993d4e636343eb5291ce6"
     end
   end
 
@@ -19,13 +19,13 @@ class Mis < Formula
     else
       bin.install "mis-darwin-arm64" => "mis"
     end
+
     # Remove quarantine attribute
     system "xattr", "-d", "com.apple.quarantine", "#{bin}/mis"
   rescue
     # Ignore if xattr fails (in case attribute doesn't exist)
     nil
   end
-
 
   test do
     system "\#{bin}/mis", "--version"
