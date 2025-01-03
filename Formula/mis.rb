@@ -1,5 +1,5 @@
 class Mis < Formula
-  desc "Kubernetes Management and Inspection System"
+  desc "MIS Agentic Shell System"
   homepage "https://github.com/ramborogers/mis"
   version "0.1.2m"
 
